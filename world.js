@@ -39,16 +39,15 @@ var World = function() {
 		container.addEventListener('mousedown', onMouseDown, false);
 		container.addEventListener('mousemove', onMouseMove, false);
 		container.addEventListener('mouseup', onMouseUp, false);
-		setTimeout(function(){
-	   		var love = document.createElement('audio');
+	  var love = document.createElement('audio');
 
-			love.setAttribute('src','love.mp3');
-			love.setAttribute('autoplay','autoplay');
-			
-		}, 7000)
-		render();
+		love.setAttribute('src','love.mp3');
+		love.setAttribute('autoplay','autoplay');
+		document.head.appendChild(love);	
+      
+    render();
 
-		document.head.appendChild(love);	}
+  }
 	var onMouseDownMouseX = 0,
 		onMouseDownMouseY = 0,
 		lon = 0,
