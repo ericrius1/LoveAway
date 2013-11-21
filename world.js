@@ -15,9 +15,7 @@ var World = function() {
 				tExplosion: {
 					type: "t",
 					value: 0,
-					texture: THREE.ImageUtils.loadTexture('green.png', function(){
-
-					})
+					texture: THREE.ImageUtils.loadTexture('love.png')
 				},
 				time: {
 					type: "f",
@@ -41,10 +39,13 @@ var World = function() {
 		container.addEventListener('mousedown', onMouseDown, false);
 		container.addEventListener('mousemove', onMouseMove, false);
 		container.addEventListener('mouseup', onMouseUp, false);
-	   	var love = document.createElement('audio');
-		love.setAttribute('src','love.mp3');
-		love.setAttribute('autoplay','autoplay');
+		setTimeout(function(){
+	   		var love = document.createElement('audio');
+
+			love.setAttribute('src','love.mp3');
+			love.setAttribute('autoplay','autoplay');
 			
+		}, 7000)
 		render();
 
 		document.head.appendChild(love);	}
